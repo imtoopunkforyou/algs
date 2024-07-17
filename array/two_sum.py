@@ -33,8 +33,8 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 
 def twoSum(nums: list[int], target: int) -> list[int]:
-    for idx in range(0, len(nums) - 1):
-        for idx_next in range(1, len(nums)):
+    for idx in range(len(nums) - 1):
+        for idx_next in range(idx + 1, len(nums)):
             if nums[idx] + nums[idx_next] == target:
                 return [idx, idx_next]
 
