@@ -32,16 +32,14 @@ def fib(n: int):
     if n == 0:
         return 0
 
-    def _gen():
-        a, b = 1, 1
-        idx = 0
-        for _ in range(n):
-            idx += 1
-            yield a, idx
-            a, b = b, a + b
-    fib_seq = tuple(_gen())
+    fib_seq = []
+    a, b = 1, 1
+    for _ in range(n):
+        fib_seq.append(a)
+        a, b = b, a + b
 
-    return fib_seq[-1][0]
+    return fib_seq[-1]
+
 
 if __name__ == '__main__':
     assert 3 == fib(4)
