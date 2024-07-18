@@ -29,16 +29,10 @@ Constraints:
 
 
 def fib(n: int):
-    if n == 0:
-        return 0
-
-    fib_seq = []
-    a, b = 1, 1
-    for _ in range(n):
-        fib_seq.append(a)
-        a, b = b, a + b
-
-    return fib_seq[-1]
+    if n < 2:
+        return n
+    else:
+        return fib(n - 1) + fib(n - 2)
 
 
 if __name__ == '__main__':
