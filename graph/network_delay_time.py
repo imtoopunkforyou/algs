@@ -20,7 +20,7 @@ Output: 1
 
 Example 3:
 Input: times = [[1,2,1]], n = 2, k = 2
-Output: -1 
+Output: -1
 
 Constraints:
 1 <= k <= n <= 100
@@ -32,7 +32,7 @@ ui != vi
 All the pairs (ui, vi) are unique. (i.e., no multiple edges.)
 """
 
-# TODO
+# TODO Dijkstra’s algorithm
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
     as_none = -1
     ...
