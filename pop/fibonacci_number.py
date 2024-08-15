@@ -28,15 +28,28 @@ Constraints:
 """
 
 
-def fib(n: int):
+def fib_recursion(n: int):
     if n < 2:
         return n
     else:
-        return fib(n - 1) + fib(n - 2)
+        return fib_recursion(n - 1) + fib_recursion(n - 2)
+
+
+def fib_sequentially(n: int):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+
+    return a % 10
 
 
 if __name__ == '__main__':
-    assert 3 == fib(4)
-    assert 2 == fib(3)
-    assert 1 == fib(1)
-    assert 0 == fib(0)
+    assert 3 == fib_recursion(4)
+    assert 2 == fib_recursion(3)
+    assert 1 == fib_recursion(1)
+    assert 0 == fib_recursion(0)
+
+    assert 3 == fib_sequentially(4)
+    assert 2 == fib_sequentially(3)
+    assert 1 == fib_sequentially(1)
+    assert 0 == fib_sequentially(0)
