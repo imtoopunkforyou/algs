@@ -41,6 +41,9 @@ Constraints:
 def find_GCD(nums: list[int]) -> int:
     nums.sort()
     b, a = nums[0], nums[-1]
+    
+    if a == 0 or b == 0:
+        return a + b
 
     while True:
         r = a % b
