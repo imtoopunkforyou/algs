@@ -25,7 +25,7 @@ class ListNode:
         self.next = next
 
     def __hash__(self):
-        basis = tuple(self.val, self.next)
+        basis = self.val
 
         return hash(basis)
 
